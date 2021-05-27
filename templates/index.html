@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Face Recognition(Classification)</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Face Recognition And <span>Classification</span></h1>
+        <p>This is a AI Model That Recognizes 5 Famous People Face.</p>
+        <p>Created By <a href="https://github.com/MuhammadHananAsghar" target="_blank">Muhammad Hanan Asghar</a></p>
+    </div>
+    <section id="coursal">
+        <div class="card">
+            <img src="{{url_for('static', filename='steve.jpg')}}" alt="Steve Jobs">
+            <label>Steve Jobs</label>
+        </div>
+        <div class="card">
+            <img src="{{url_for('static', filename='bill.jpeg')}}" alt="Bill Gates">
+            <label>Bill Gates</label>
+        </div>
+        <div class="card">
+            <img src="{{url_for('static', filename='mark.jpg')}}" alt="Mark Zuckerberg">
+            <label>Mark Zuckerberg</label>
+        </div>
+        <div class="card">
+            <img src="{{url_for('static', filename='jeff.jpg')}}" alt="Jeff Bezos">
+            <label>Jeff Bezos</label>
+        </div>
+        <div class="card">
+            <img src="{{url_for('static', filename='elon.jpg')}}" alt="Elon Musk">
+            <label>Elon Musk</label>
+        </div>
+    </section>
+    <div class="drag-area">
+        <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <header>Drag & Drop to Upload File</header>
+        <span>OR</span>
+        <button>Browse File</button>
+        <input type="file" id="file" accept="image/png, image/jpeg, image/jpg" hidden>
+    </div>
+    <div id="buttons_container">
+        <button id="predict">Predict!</button>&nbsp;&nbsp;
+        <button id="again" onclick="location.reload();">Reload</button>
+    </div>
+
+    <h4 id="message"></h4>
+    <div id="snackbar">Predicting, Wait 5-10 sec..</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: #5256ad;
+}
+#header{
+    margin-top: 25px;
+    color: #fff;
+    text-align: center;
+}
+#header h1 span{
+    color: #922B21;
+}
+#header div p{
+    padding-top: 5px;
+}
+#header a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.5s ease;
+}
+#header a:hover{
+    text-decoration: underline;
+}
+#coursal{
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 220px;
+    height: 220px;
+    margin: 10px;
+}
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 7px 5px 35px -5px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 7px 5px 35px -5px rgba(0,0,0,0.76);
+    -moz-box-shadow: 7px 5px 35px -5px rgba(0,0,0,0.76);
+    transition: all 0.5s ease;
+}
+.card img:hover{
+    box-shadow: none;
+}
+.card label{
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #5256ad;
+    position: relative;
+    bottom: 50%;
+    font-weight: bold;
+    font-size: 19px;
+}
+.drag-area{
+    border: 2px dashed #fff;
+    height: 300px;
+    width: 400px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+.drag-area.active{
+    border: 2px solid #fff;
+  }
+  .drag-area .icon{
+    font-size: 50px;
+    color: #fff;
+  }
+  .drag-area header{
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+  }
+  .drag-area span{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+  }
+  .drag-area button{
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .drag-area img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  #predict,#again{
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #buttons_container{
+      display: flex;
+      padding: 10px;
+  }
+#message{
+    font-size: 20px;
+    color: #fff;
+    margin: 10px;
+    font-weight: 400;
+}
+#message span{
+    color: #922B21;
+}
+
+@media (max-width: 413px){
+    .drag-area{
+        height: 200px;
+        width: 300px;
+    }
+    .drag-area button{
+        padding: 5px 15px;
+        margin-bottom: 15px;
+    }
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #fff; /* Black background color */
+    color: #5256ad; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    font-weight: bold;
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }

@@ -1,0 +1,10 @@
+numpy==1.19.5
+keras
+tensorflow-cpu
+h5py
+pillow
+mtcnn
+matplotlib
+flask
+opencv-contrib-python-headless
+gunicorn
